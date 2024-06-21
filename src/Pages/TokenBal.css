@@ -1,0 +1,23 @@
+.table-container {
+    width: 100%;
+    overflow-x: auto;
+  }
+  
+  .table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .table-header, .table-cell {
+    border: solid 1px gray;
+    padding: 10px;
+    text-align: left;
+  }
+  
+  @media (max-width: 600px) {
+    .table-header, .table-cell {
+      font-size: 12px;
+      padding: 5px;
+    }
+  }
+  

@@ -10,15 +10,15 @@ function Navbar() {
 
   return (
     <div className="bg-gradient-to-r from-indigo-500 from-10% via-sky-500 via-30% to-emerald-500 to-90% flex justify-between items-center px-8 py-4">
-      <Link to="/" className="ml-36 font-medium text-4xl text-green-400 sm:text-start">
-        Build<span className="italic">So</span>
+      <Link to="/" className="ml-36 font-light text-5xl text-green-400 sm:text-start">
+        Build<span className="italic font-light">So</span>
       </Link>
 
       <div className="hidden lg:flex space-x-20">
-        <Link to="/market" className="text-white hover:text-purple-400">Market</Link>
-        <a href="#" className="text-white hover:text-purple-400">Swap</a>
+        <Link to="/market" className="text-white hover:text-purple-400 text-xl">Market</Link>
+        <Link to="/swap" className="text-white hover:text-purple-400 text-xl">Swap</Link>
         <div className="relative group">
-          <a href="#" className="text-white hover:text-purple-400">Wallet</a>
+          <a href="#" className="text-white hover:text-purple-400 text-xl">Wallet</a>
         </div>
       </div>
 
@@ -43,7 +43,7 @@ function Navbar() {
         <div className="lg:hidden absolute top-16 left-0 right-0 bg-white shadow-md z-10">
           <div className="flex flex-col items-start pt-2 pb-3 space-y-1 sm:px-3">
             <Link to="/market" className="block text-black px-3 py-2">Market</Link>
-            <a href="#" className="block text-black px-3 py-2">Swap</a>
+            <Link to="/swap" className="block text-black px-3 py-2">Swap</Link>
             <a href="#" className="block text-black px-3 py-2">Wallet</a>
             <button className="bg-gray-300 px-4 py-2 rounded mx-3 my-2">Login</button>
             <span className="text-black px-3 py-2">Coin Balance</span>

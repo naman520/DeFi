@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { Network, Alchemy } from 'alchemy-sdk';
 import { useTable } from 'react-table';
+import './TokenBal.css'; // Ensure you import the CSS file
 
 const settings = {
   apiKey: "_Lg2a_CIxvNJvs2mD3n3Y4V9RyfmBz8s", // Replace with your actual Alchemy API key
@@ -29,9 +30,9 @@ const TokenBalance = () => {
           // Add more API calls as needed for other data points
 
           return {
-            name: metadata.title || address,
-            floorPrice: `${floorPrice.openSea.floorPrice} ETH`,
-            change24h: `${floorPrice.openSea.floorPriceChangePercentage}%`,
+            name: metadata.title || `NFT at ${address.substring(0, 6)}...${address.substring(address.length - 4)}`,
+            floorPrice: `${floorPrice.openSea.floorPrice || 'undefined'} ETH`,
+            change24h: `${floorPrice.openSea.floorPriceChangePercentage || 'undefined'}%`,
             marketCap: 'N/A', // Market cap needs to be calculated separately if available
             volume24h: 'N/A', // Volume needs to be fetched/calculated if available
             sales24h: 'N/A', // Sales needs to be fetched/calculated if available
@@ -91,39 +92,41 @@ const TokenBalance = () => {
   } = useTable({ columns, data: nftData });
 
   return (
-    <table {...getTableProps()} style={{ width: '100%', borderCollapse: 'collapse' }}>
-      <thead className="bg-green-100 text-green-900"> 
-        {headerGroups.map(headerGroup => (
-          <tr {...headerGroup.getHeaderGroupProps()}>
-            {headerGroup.headers.map(column => (
-              <th
-                {...column.getHeaderProps()}
-                style={{ border: 'solid 1px gray', padding: '10px' }}
-              >
-                {column.render('Header')}
-              </th>
-            ))}
-          </tr>
-        ))}
-      </thead>
-      <tbody className={"bg-green-300"} {...getTableBodyProps()}>
-        {rows.map(row => {
-          prepareRow(row);
-          return (
-            <tr {...row.getRowProps()}>
-              {row.cells.map(cell => (
-                <td
-                  {...cell.getCellProps()}
-                  style={{ border: 'solid 1px gray', padding: '10px' }}
+    <div className="table-container">
+      <table {...getTableProps()} className="table">
+        <thead className="bg-green-100 text-green-900">
+          {headerGroups.map(headerGroup => (
+            <tr {...headerGroup.getHeaderGroupProps()}>
+              {headerGroup.headers.map(column => (
+                <th
+                  {...column.getHeaderProps()}
+                  className="table-header"
                 >
-                  {cell.render('Cell')}
-                </td>
+                  {column.render('Header')}
+                </th>
               ))}
             </tr>
-          );
-        })}
-      </tbody>
-    </table>
+          ))}
+        </thead>
+        <tbody className={"bg-green-300"} {...getTableBodyProps()}>
+          {rows.map(row => {
+            prepareRow(row);
+            return (
+              <tr {...row.getRowProps()}>
+                {row.cells.map(cell => (
+                  <td
+                    {...cell.getCellProps()}
+                    className="table-cell"
+                  >
+                    {cell.render('Cell')}
+                  </td>
+                ))}
+              </tr>
+            );
+          })}
+        </tbody>
+      </table>
+    </div>
   );
 };
 
