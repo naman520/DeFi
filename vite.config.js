@@ -6,6 +6,7 @@ export default defineConfig({
   build: {
     rollupOptions: {
       external: ['alchemy-sdk'],
+      external: ['react-table'],
     },
   },
 });
