@@ -9,7 +9,7 @@ export default function Body() {
   };
 
   return (
-    <div className=" lg:min-h-screen bg-gradient-to-r from-teal-800 via-blue-600 to-teal-800 animate-customPulse">
+    <div className=" min-h-screen bg-gradient-to-r from-teal-800 via-blue-600 to-teal-800 animate-customPulse">
       <div className="font-sans p-8">
         <div className="flex justify-center mt-10 space-x-20 font-medium text-xl text-white">
           <button
