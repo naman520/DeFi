@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import Coin from './Coin';
+import Footer from './Footer';
 
 export default function Body() {
   const [activeTab, setActiveTab] = useState('Coins');
@@ -41,6 +42,9 @@ export default function Body() {
           {activeTab === 'Coins' && <Coin />}
           {activeTab === 'Discussion' && <div>Discussion content goes here.</div>}
           {activeTab === 'News' && <div>News content goes here.</div>}
+        </div>
+        <div>
+          <Footer />
         </div>
       </div>
     </div>

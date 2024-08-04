@@ -4,6 +4,7 @@ import Api from './Pages/Api'
 import Market from './Pages/Market'
 import Swap from './Pages/Swap'
 import GraphComponent from './Pages/GraphComponent'
+import Wallet from './Pages/Wallet'
 function App() {
 
   return (
@@ -15,6 +16,7 @@ function App() {
         <Route path="market" element={<Market />} ></Route>
         <Route path="graph" element={<GraphComponent />} ></Route>
         <Route path="swap" element={<Swap />} ></Route>
+        <Route path="wallet" element={<Wallet />} ></Route>
       </Routes>
     </BrowserRouter>
     </>

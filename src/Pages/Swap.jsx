@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import Navbar from './Navbar';
+import Footer from './Footer';
 
 export default function Swap() {
   const coins = [
@@ -101,6 +102,9 @@ export default function Swap() {
             <h3 className="font-semibold">New Loyalty program is here!</h3>
             <p>Receive BTC cashback for every exchange</p>
           </div>
+        </div>
+        <div>
+          <Footer />
         </div>
       </div>
     </>

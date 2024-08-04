@@ -18,7 +18,7 @@ function Navbar() {
         <Link to="/market" className="text-white hover:text-purple-400 text-xl">Market</Link>
         <Link to="/swap" className="text-white hover:text-purple-400 text-xl">Swap</Link>
         <div className="relative group">
-          <a href="#" className="text-white hover:text-purple-400 text-xl">Wallet</a>
+          <Link to='/wallet' className="text-white hover:text-purple-400 text-xl">Wallet</Link>
         </div>
       </div>
 
@@ -44,7 +44,7 @@ function Navbar() {
           <div className="flex flex-col items-start pt-2 pb-3 space-y-1 sm:px-3">
             <Link to="/market" className="block text-black px-3 py-2">Market</Link>
             <Link to="/swap" className="block text-black px-3 py-2">Swap</Link>
-            <a href="#" className="block text-black px-3 py-2">Wallet</a>
+            <Link to="/wallet" className="block text-black px-3 py-2">Wallet</Link>
             <button className="bg-gray-300 px-4 py-2 rounded mx-3 my-2">Login</button>
             <span className="text-black px-3 py-2">Coin Balance</span>
           </div>

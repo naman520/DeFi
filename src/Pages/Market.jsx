@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import Navbar from './Navbar';
 import Api from './Api';
 import Coins from './Coins'; 
+import Footer from './Footer';
 
 const Market = () => {
   const [activeTab, setActiveTab] = useState('Coin List');
@@ -19,6 +20,9 @@ const Market = () => {
           {activeTab === 'Coin List' && <Coins />}
           {activeTab === 'DeFi' && <div>DeFi Content</div>}
           {activeTab === 'NFT' && <Api />}
+        </div>
+        <div>
+          <Footer />
         </div>
       </div>
     </>
