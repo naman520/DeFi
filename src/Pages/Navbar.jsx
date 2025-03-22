@@ -24,7 +24,7 @@ function Navbar() {
 
       <div className="hidden lg:flex items-center space-x-4">
         <button className="bg-gray-300 px-4 py-2 rounded">Login</button>
-        <span className="text-white">Coin Balance</span>
+        <span className="text-white">Coins Balance</span>
       </div>
 
       <div className="lg:hidden">
