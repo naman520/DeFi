@@ -11,7 +11,7 @@ function Navbar() {
   return (
     <div className="bg-gradient-to-r from-indigo-500 from-10% via-sky-500 via-30% to-emerald-500 to-90% flex justify-between items-center px-8 py-4 ">
       <Link to="/" className="font-light text-5xl text-white ml-0 sm:ml-36 text-left sm:text-center">
-        cyrpto<span className="italic font-light">So</span>
+        cyrpto currency<span className="italic font-light">So</span>
       </Link>
 
       <div className="hidden lg:flex space-x-20">
